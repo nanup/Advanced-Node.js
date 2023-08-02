@@ -1,5 +1,3 @@
-const messageController = require('./controllers/message.controller');
-
 const express = require('express');
 const friendsRouter = require('./routers/friends.router');
 const messagesRouter = require('./routers/messages.router');
@@ -20,6 +18,7 @@ app.get('/', (req, res) => {
   return res.send('Hello!');
 });
 
+app.use(express.static('public'));
 app.use(express.json());
 
 app.use('/friends', friendsRouter);

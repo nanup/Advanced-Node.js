@@ -4,7 +4,7 @@ const express = require('express');
 
 const messagesRouter = express.Router();
 
-messagesRouter.post('/', messageController.getMessages);
-messagesRouter.get('/', messageController.postMessage);
+messagesRouter.get('/', messageController.getMessages);
+messagesRouter.post('/', messageController.postMessage);
 
 module.exports = messagesRouter;
