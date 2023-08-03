@@ -1,12 +1,7 @@
-import { withSounds } from "arwes";
+import { withSounds } from 'arwes';
 
-const Clickable = props => {
-  const {
-    children,
-    sounds,
-    onClick,
-    ...rest
-  } = props;
+const Clickable = (props) => {
+  const { children, sounds, onClick, ...rest } = props;
 
   const clickWithSound = (e) => {
     sounds.click && sounds.click.play();
@@ -14,7 +9,9 @@ const Clickable = props => {
   };
 
   return (
-    <span {...rest} onClick={clickWithSound}>
+    <span
+      {...rest}
+      onClick={clickWithSound}>
       {children}
     </span>
   );
