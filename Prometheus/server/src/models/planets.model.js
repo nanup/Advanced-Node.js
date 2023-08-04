@@ -32,7 +32,7 @@ const loadHabitablePlanets = () => {
         }
       })
       .on('end', () => {
-        console.log(habitablePlanets.length);
+        console.log(`Found ${habitablePlanets.length} habitable planets.`);
         resolve();
       });
   });
